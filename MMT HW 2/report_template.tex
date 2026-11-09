@@ -1,0 +1,64 @@
+% 'draft' mode can be used to speed up compilation
+\documentclass[oneside,final]{hcmut-report}
+\usepackage{codespace}
+% Encodings
+\usepackage{gensymb,textcomp}
+% Better tables & graphics (giữ lại nếu cần dùng sau này)
+\usepackage{array,longtable,multicol,multirow,siunitx,tabularx}
+\usepackage{enumitem}
+\usepackage{caption,float}
+\usepackage[export]{adjustbox}
+\usepackage[nameinlink]{cleveref}
+
+% ==================== CẤU HÌNH HEADER & FOOTER ====================
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{} % Xóa các định dạng header/footer mặc định
+
+% 1. Cấu hình Header (Logo bên trái, text kế bên)
+\fancyhead[L]{%
+    % Lưu ý: Thay 'logo.png' bằng tên file ảnh logo Bách Khoa thực tế của bạn
+    \raisebox{-0.1\height}{\includegraphics[height=1.0 cm]{graphics/hcmut.png}} 
+    \hspace{5pt}
+    \begin{tabular}[b]{@{}l@{}}
+        University of Technology Ho Chi Minh City \\
+        Faculty of Computer Science and Engineering
+    \end{tabular}
+}
+
+% 2. Cấu hình Footer
+\fancyfoot[L]{Tên môn học - Semester "Học kì hiện hành"}
+\fancyfoot[R]{Page \textcolor{blue}{\thepage/\pageref{LastPage}}}
+
+% 3. Cấu hình đường kẻ ngang
+\renewcommand{\headrulewidth}{0.4pt} % Kẻ dưới header
+\renewcommand{\footrulewidth}{0.4pt} % Kẻ trên footer
+
+% ==================== CẤU HÌNH THÔNG TIN BÁO CÁO ====================
+\coursename{Tên môn học}
+\reporttype{Báo cáo bài tập lớn}
+\title{Homework 2b}
+\advisor{Tên GVHD &}
+\stuname{Tên SV 1 & Tên SV 2}
+
+\begin{document}
+
+% Tạo trang tiêu đề tự động của hcmut-report
+\coverpage
+
+% ==================== MỤC LỤC ====================
+\newpage
+\tableofcontents
+\newpage
+
+% ==================== NỘI DUNG CHÍNH ====================
+\section{System Architecture}
+Nội dung phần 1 viết ở đây...
+
+\subsection{System Architecture Layers}
+Nội dung phần 1.1 viết ở đây...
+
+\end{document}
